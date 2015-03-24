@@ -41,7 +41,9 @@ app.post('/play/scissors',function(req, res){
 	console.log(game.getMove('scissors',history));
   	res.json(history);
 });
-
+app.post('/play',function(req, res){
+  	res.json(history);
+});
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
